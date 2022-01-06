@@ -1,0 +1,44 @@
+body {
+    background-color: mistyrose;
+    color: midnightblue;
+}
+body img{
+    border-radius: 50%;
+}
+html{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+/* The animation code */
+@keyframes example {
+    from {background-color: pink;}
+    to {background-color: lightblue;}
+  }
+  
+  /* The element to apply the animation to */
+  body {
+    background-color: pink;
+    animation-name: example;
+    animation-duration: 5s;
+  }
+
+.hero-btn{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 2px solid palevioletred;
+    color: whitesmoke;
+    background: palevioletred;
+    position: relative;
+    padding: 10px 10px;
+    
+}
+
+.hero-btn:hover{
+    color: mintcream;
+    border: 2px solid midnightblue;
+    background: midnightblue;
+    transition: 2s;
+}
