@@ -85,14 +85,17 @@ html{
     background-size: cover;
 }
 
-
 body{
         padding: 20px;
         margin: 50px;
     }
 
 /* LAYOUTS */
-
+/* main{
+    width: 50%;
+    display: inline-block;
+    margin: 0 0;
+} */
 header{
     display: 'flex';
     flex-wrap: wrap;
@@ -103,22 +106,36 @@ aside{
     width: 50%;
     display: inline-block;
     vertical-align: top;
-    justify-content: left;
+    text-align: left;
 }
 
 .about{
     display: inline-block;
-    margin-left: 50%;
+    margin-left: 60px;
     text-align: right;
     width: 50%;
+    margin-left: 50%;
 }
 
 aside img{
-    display: block;
+    margin-top: -70px;
+    /* display: inline-block; */
     width: 80%;
     height: 80%;
-    justify-content: top left;
+    /* justify-content: top left; */
+    animation-duration: 2s;
+    animation-name: dance;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+/* image animation cuz why not? */
+@keyframes dance {
+0%   {transform: rotate(0deg)}
+  33%  {transform: rotate(2deg)}
+  67%  {transform: rotate(-4deg)}
+  100% {transform: rotate(0deg)}
+  }
 
 /* FONT STYLING */
 header h1{
@@ -127,12 +144,13 @@ header h1{
     font-family: 'Island Moments', cursive;
     margin-bottom: -70px;
     text-align: right;
-    border-color: chocolate;
-    animation-duration: 2s;
-    animation-name: jztr;
-    animation-iteration-count: infinite;
+    /* border-color: chocolate; */
     text-shadow: 3px 0 0 chocolate;
 }
+
+/* header h1:hover{
+    border-color: 0 0 20px 0px cornsilk;
+} */
 
 header h2{
     display: inline-block;
@@ -206,26 +224,40 @@ aside, body{
     margin: 10px 10px;
 }
 
-.best-moments h2{
+.bm h2{
+    font-family: 'Griffy', cursive;
+    font-size: 50px;
     display: inline-block;
-    justify-content: left;
-    padding: 10px;
-    color:chocolate;
-    border: 2px solid black;
-    background-color: black;
-    border-radius: 20px;
+    padding: 0 10px;
+    color: rgb(0, 0, 0);
+    /* text-shadow: 3px 0 0 black; */
+    /* content:""; */
+        background-color: chocolate;
+        background-position: 50% 50%;
+        background-size: auto;
+        height: 1.2em;
 }
 
-.best-moments .text-box{
-    display: inline-block;
-    text-align: left;
-    opacity: 0.8;
-    background-image: linear-gradient(rgba(255, 209, 140, 0.5),rgb(255, 209, 140,0.5)), url(images/paper3.jpg);
+.bm-col{
+    /* display: inline-block; */
+    text-align: center;
+    /* opacity: 0.8; */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(255, 138, 138, 0.8)), url(images/paper3.jpg); */
+    background-color: black;
     background-size: auto;
-    padding: 20px 30px 20px 50px;
+    /* padding: 20px 30px 20px 50px; */
     font-size: 22px;
     border-radius: 10px;
     font-family: 'Patrick Hand', cursive;
+    padding: 20px 20px;
+}
+.bm-col:hover{
+    box-shadow: 0 0 20px 0px cornsilk;
+}
+
+.bm-col h3{
+    text-align: center;
+    color: chocolate;
 }
 
 .video h2{
@@ -271,3 +303,58 @@ footer h3{
 .fa-heart{
     color: chocolate;
 }
+
+/* .bm-col{
+    display: flex;
+    flex-basis: 31%;
+    background: mistyrose;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    justify-content: center;
+} */
+
+
+/* .row img{
+    width: 300px;
+    height: auto;
+    padding: auto 20px;
+} */
+
+
+
+.bm{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.bm-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    margin: auto 20px;
+}
+
+.bm-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.row{
+    display: flex;
+    /* width: 30%; */
+    justify-content: space-between;
+}
+
+/* .bm-col p{
+    padding: 0;
+}
+
+.bm-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+} */
